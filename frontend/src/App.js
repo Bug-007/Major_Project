@@ -1,19 +1,25 @@
 import "./App.css";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Admin from "./components/admin";
-import Main from "./components/main";
-import Signin from "./components/main/Signin";
-import Signup from "./components/main/Signup";
-import Home from "./components/main/Home";
+import Main from "./components/patient";
+import Signin from "./components/patient/Signin";
+import Signup from "./components/patient/Signup";
 import UserAuth from "./auth/UserAuth";
-import User from "./components/user";
-import UserProfile from "./components/user/UserProfile";
+import User from "./components/doctor";
+import UserProfile from "./components/doctor/UserProfile";
 import AdminProfile from "./components/admin/AdminProfile";
 import NotFound from "./components/NotFound";
 import AdminAuth from "./auth/AdminAuth";
 import UserProvider from "./context/UserProvider";
 import AdminProvider from "./context/AdminProvider";
 import { useState } from "react";
+import RightBar from "./components/patient/RightBar";
+import Reciept from "./components/patient/Reciept";
+import Upload from "./components/patient/Upload";
+import PermissionTab from "./components/patient/PermissionTab";
+import Laboratory from "./components/laboratory/Index";
+import UploadPage from "./components/patient/Upload";
+import UploadPageTab from "./components/laboratory/UploadPageTab";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(
@@ -26,8 +32,8 @@ function App() {
 
   return (
     <BrowserRouter>
-      <AdminProvider currentUser={currentAdmin}>
-        <UserProvider currentUser={currentUser}>
+      {/* <AdminProvider currentUser={currentAdmin}>
+        <UserProvider currentUser={currentUser}> */}
           <Routes>
             <Route element={<Navigate to="/main/home" />} path="/" />
             <Route
@@ -41,10 +47,15 @@ function App() {
               <Route element={<AdminProfile />} path="profile" />
             </Route>
 
-            <Route element={<Main />} path="main">
-              <Route element={<Home />} path="home" />
-              <Route element={<Signin />} path="signin" />
-              <Route element={<Signup />} path="signup" />
+            <Route element={<Main />} path="patient">
+              <Route element={<RightBar />} path="home" />
+              <Route element={<Reciept />} path="reciept" />
+              <Route element={<Upload />} path="upload" />
+              <Route element={<PermissionTab />} path="permission" />
+            </Route>
+
+            <Route element={<Laboratory />} path="laboratory">
+              <Route element={<UploadPageTab />} path="home" />
             </Route>
 
             <Route
@@ -59,8 +70,8 @@ function App() {
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </UserProvider>
-      </AdminProvider>
+        {/* </UserProvider>
+      </AdminProvider> */}
     </BrowserRouter>
   );
 }
