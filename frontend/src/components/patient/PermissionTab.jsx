@@ -1,9 +1,7 @@
 import { Box, Tab, Tabs} from "@mui/material";
 import { useState } from "react";
 import Grid from "@mui/material/Grid";
-import All from "./All";
-import Approved from "./Approved"
-import Rejected from "./Rejected"
+import PermissionTable from "./PermissionTable"
 
 function App() {
   const [tabIndex, setTabIndex] = useState(0);
@@ -62,17 +60,17 @@ function App() {
         <Box sx={{ padding: 2 }}>
           {tabIndex === 0 && (
             <Box>
-              <All></All>
+              <PermissionTable random={rows} />
             </Box>
           )}
           {tabIndex === 1 && (
             <Box>
-              <Approved />
+              <PermissionTable random={rows}  />
             </Box>
           )}
           {tabIndex === 2 && (
             <Box>
-              <Rejected />
+              <PermissionTable random={rows} />
             </Box>
           )}
         </Box>

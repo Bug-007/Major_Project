@@ -35,7 +35,7 @@ function App() {
       {/* <AdminProvider currentUser={currentAdmin}>
         <UserProvider currentUser={currentUser}> */}
           <Routes>
-            <Route element={<Navigate to="/main/home" />} path="/" />
+            <Route element={<Navigate to="/patient/home" />} path="/" />
             <Route
               element={
                 // <AdminAuth>
