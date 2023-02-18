@@ -6,6 +6,7 @@ import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
 import HowToRegOutlinedIcon from "@mui/icons-material/HowToRegOutlined";
 import { styled } from "@mui/material/styles";
 import Link from "@mui/material/Link";
+import { NavLink } from "react-router-dom";
 
 const LeftBar = () => {
   const ListItemTextCust = styled(Link)({
@@ -13,19 +14,19 @@ const LeftBar = () => {
     textDecoration: "none",
     color: "black",
     cursor: "pointer",
-    fontSize: "18px"
+    fontSize: "18px",
   });
 
   const ListIcon = styled(ListItemIcon)({
-    cursor:"pointer",
-    color:"black"
-  })
+    cursor: "pointer",
+    color: "black",
+  });
 
   return (
     <Box
       component={"div"}
       sx={{
-        display: { xs: "none", md: "flex" } ,
+        display: { xs: "none", md: "flex" },
         flex: "1",
         backgroundColor: "#EEEEEE",
         height: "calc(100vh - 70px)",
@@ -37,30 +38,38 @@ const LeftBar = () => {
           marginTop: "50px",
         }}
       >
-        <ListItem>
-          <ListIcon>
-            <CloudUploadOutlinedIcon />
-          </ListIcon>
-          <ListItemTextCust> Upload</ListItemTextCust>
-        </ListItem>
-        <ListItem>
-          <ListIcon>
-            <LibraryBooksOutlinedIcon />
-          </ListIcon>
-          <ListItemTextCust> Medical History</ListItemTextCust>
-        </ListItem>
-        <ListItem>
-          <ListIcon>
-            <ReceiptOutlinedIcon />
-          </ListIcon>
-          <ListItemTextCust> Medical Receipts</ListItemTextCust>
-        </ListItem>
-        <ListItem>
-          <ListIcon>
-            <HowToRegOutlinedIcon />
-          </ListIcon>
-          <ListItemTextCust> Permissions </ListItemTextCust>
-        </ListItem>
+        <NavLink to={"home"}>
+          <ListItem>
+            <ListIcon>
+              <LibraryBooksOutlinedIcon />
+            </ListIcon>
+            <ListItemTextCust>Medical History</ListItemTextCust>
+          </ListItem>
+        </NavLink>
+        <NavLink to={"reciept"}>
+          <ListItem>
+            <ListIcon>
+              <ReceiptOutlinedIcon />
+            </ListIcon>
+            <ListItemTextCust>Medical Receipts</ListItemTextCust>
+          </ListItem>
+        </NavLink>
+        <NavLink to={"permission"}>
+          <ListItem>
+            <ListIcon>
+              <HowToRegOutlinedIcon />
+            </ListIcon>
+            <ListItemTextCust> Permissions </ListItemTextCust>
+          </ListItem>
+        </NavLink>
+        <NavLink to={"upload"}>
+          <ListItem>
+            <ListIcon>
+              <CloudUploadOutlinedIcon />
+            </ListIcon>
+            <ListItemTextCust>Upload</ListItemTextCust>
+          </ListItem>
+        </NavLink>
       </List>
     </Box>
   );

@@ -61,6 +61,9 @@ const pages = ["Medical History", "Medical Reciepts", "Permissions"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Header() {
+
+
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
