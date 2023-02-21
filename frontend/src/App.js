@@ -58,6 +58,8 @@ function App() {
               <Route element={<UploadPageTab />} path="home" />
             </Route>
 
+              <Route element={<UploadPageTab />} path="doctor/home" />
+
             <Route
               element={
                 // <UserAuth>

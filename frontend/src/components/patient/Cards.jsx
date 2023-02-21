@@ -22,61 +22,61 @@ export default function Cards() {
       alignItems="flex-start"
       marginTop={"20px"}
     >
-      <Card sx={{ maxWidth: 250, maxHeight: 250, minWidth: "250px" }} >
+      <Card sx={{ maxWidth: 250, maxHeight: 250, minWidth: "310px" }} >
         <CardActionArea>
           <CardMedia
             component="img"
-            height="140"
-            image="./assets/logo.jpg"
+            height="140px"
+            image="../assets/docicon.jpg"
             alt="green iguana"
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
+            <Typography gutterBottom variant="overline" component="div">
               Report 1
             </Typography>
           </CardContent>
         </CardActionArea>
       </Card>
-      <Card  sx={{ maxWidth: 250, maxHeight: 250, minWidth: "250px" }} >
+      <Card  sx={{ maxWidth: 250, maxHeight: 250, minWidth: "310px" }} >
         <CardActionArea>
           <CardMedia
             component="img"
             height="140"
-            image="./assets/logo.jpg"
+            image="../assets/docicon.jpg"
             alt="green iguana"
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
+            <Typography gutterBottom variant="overline" component="div">
             Report 2
             </Typography>
           </CardContent>
         </CardActionArea>
       </Card>
-      <Card  sx={{ maxWidth: 250, maxHeight: 250, minWidth: "250px" }} >
+      <Card  sx={{ maxWidth: 250, maxHeight: 250, minWidth: "310px" }} >
         <CardActionArea>
           <CardMedia
             component="img"
             height="140"
-            image="./assets/logo.jpg"
+            image="../assets/docicon.jpg"
             alt="green iguana"
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
+            <Typography gutterBottom variant="overline" component="div">
             Report 3
             </Typography>
           </CardContent>
         </CardActionArea>
       </Card>
-      <Card sx={{ maxWidth: 250, maxHeight: 250, minWidth: "250px" }} >
+      <Card sx={{ maxWidth: 250, maxHeight: 250, minWidth: "310px" }} >
         <CardActionArea>
           <CardMedia
             component="img"
             height="140"
-            image="./assets/logo.jpg"
+            image="../assets/docicon.jpg"
             alt="green iguana"
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
+            <Typography gutterBottom variant="overline" component="div">
             Report 4
             </Typography>
           </CardContent>
