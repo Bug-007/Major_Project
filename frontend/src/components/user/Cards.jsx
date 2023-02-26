@@ -3,7 +3,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { CardActionArea, Grid } from "@mui/material";
+import { Box, CardActionArea, Grid } from "@mui/material";
 // import { styled } from "@mui/material/styles";
 
 export default function Cards() {
@@ -18,11 +18,28 @@ export default function Cards() {
     <Grid
       container
       direction="row"
-      justifyContent="space-around"
+      justifyContent="flex-start"
       alignItems="flex-start"
-      marginTop={"20px"}
     >
-      <Card sx={{ maxWidth: 250, maxHeight: 250, minWidth: "310px" }} >
+            <Box
+        component="div"
+        sx={{ width: "100%", display: "flex", justifyContent: "center" }}
+      >
+        <Box
+          component={"div"}
+          sx={{
+            textAlign: "center",
+            marginTop: "20px",
+            fontSize: "30px",
+            borderRadius: "10px",
+            backgroundColor: "#EEEE",
+            width: "200px",
+          }}
+        >
+          12-FEB-2023
+        </Box>
+      </Box>
+      <Card sx={{ maxWidth: 250, maxHeight: 250, minWidth: "310px", marginTop:"20px", marginLeft:"30px" }} >
         <CardActionArea>
           <CardMedia
             component="img"
@@ -37,7 +54,7 @@ export default function Cards() {
           </CardContent>
         </CardActionArea>
       </Card>
-      <Card  sx={{ maxWidth: 250, maxHeight: 250, minWidth: "310px" }} >
+      <Card  sx={{ maxWidth: 250, maxHeight: 250, minWidth: "310px", marginTop:"20px",marginLeft:"30px" }} >
         <CardActionArea>
           <CardMedia
             component="img"
@@ -52,7 +69,7 @@ export default function Cards() {
           </CardContent>
         </CardActionArea>
       </Card>
-      <Card  sx={{ maxWidth: 250, maxHeight: 250, minWidth: "310px" }} >
+      <Card  sx={{ maxWidth: 250, maxHeight: 250, minWidth: "310px", marginTop:"20px",marginLeft:"30px" }} >
         <CardActionArea>
           <CardMedia
             component="img"
@@ -67,7 +84,7 @@ export default function Cards() {
           </CardContent>
         </CardActionArea>
       </Card>
-      <Card sx={{ maxWidth: 250, maxHeight: 250, minWidth: "310px" }} >
+      <Card sx={{ maxWidth: 250, maxHeight: 250, minWidth: "310px", marginTop:"20px", marginLeft:"30px" }} >
         <CardActionArea>
           <CardMedia
             component="img"

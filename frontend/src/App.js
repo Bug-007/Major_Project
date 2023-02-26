@@ -1,9 +1,9 @@
 import "./App.css";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Admin from "./components/admin";
-import Main from "./components/patient";
-import Signin from "./components/patient/Signin";
-import Signup from "./components/patient/Signup";
+import Main from "./components/user";
+import Signin from "./components/user/Signin";
+import Signup from "./components/user/Signup";
 import UserAuth from "./auth/UserAuth";
 import User from "./components/doctor";
 import UserProfile from "./components/doctor/UserProfile";
@@ -13,13 +13,14 @@ import AdminAuth from "./auth/AdminAuth";
 import UserProvider from "./context/UserProvider";
 import AdminProvider from "./context/AdminProvider";
 import { useState } from "react";
-import RightBar from "./components/patient/RightBar";
-import Reciept from "./components/patient/Reciept";
-import Upload from "./components/patient/Upload";
-import PermissionTab from "./components/patient/PermissionTab";
+import RightBar from "./components/user/RightBar";
+import Reciept from "./components/user/Reciept";
+import Upload from "./components/user/Upload";
+import PermissionTab from "./components/user/PermissionTab";
 import Laboratory from "./components/laboratory/Index";
-import UploadPage from "./components/patient/Upload";
+import UploadPage from "./components/user/Upload";
 import UploadPageTab from "./components/laboratory/UploadPageTab";
+import Doctor from "./components/doctor/index"
 
 function App() {
   const [currentUser, setCurrentUser] = useState(
@@ -35,7 +36,7 @@ function App() {
       {/* <AdminProvider currentUser={currentAdmin}>
         <UserProvider currentUser={currentUser}> */}
           <Routes>
-            <Route element={<Navigate to="/patient/home" />} path="/" />
+            <Route element={<Navigate to="/user/home" />} path="/" />
             <Route
               element={
                 // <AdminAuth>
@@ -47,7 +48,7 @@ function App() {
               <Route element={<AdminProfile />} path="profile" />
             </Route>
 
-            <Route element={<Main />} path="patient">
+            <Route element={<Main />} path="user">
               <Route element={<RightBar />} path="home" />
               <Route element={<Reciept />} path="reciept" />
               <Route element={<Upload />} path="upload" />
@@ -57,8 +58,10 @@ function App() {
             <Route element={<Laboratory />} path="laboratory">
               <Route element={<UploadPageTab />} path="home" />
             </Route>
-
-              <Route element={<UploadPageTab />} path="doctor/home" />
+            
+            <Route element={< ></>} path="doctor">
+              <Route element={<Doctor />} path="home" />
+            </Route>
 
             <Route
               element={
